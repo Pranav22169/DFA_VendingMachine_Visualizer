@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+.container {
+  display: flex;
+  /* justify-content: center;
+      align-items: center; */
+  height: 100vh;
+  background: grey;
+}
+
+.left-cont {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: pink; */
+  /* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); */
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  gap: 80px;
+  /* border-right: 3px solid blue; */
+  
+}
+.right-cont {
+  width: 40%;
+  background: rgb(219, 175, 175);
+  /* background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%); */
+
+  z-index: 999;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.products {
+  /* display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    flex-wrap: wrap;
+    height: 40%;
+    gap: 10px; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: -10px;
+  /* padding: 20px; */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.pProduct{
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-top: -3px;
+}
+
+.products button {
+  background: transparent;
+  border: none;
+}
+.product {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  /* height: 90px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product img {
+  /* width: 60px; Adjusted width for smaller size */
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+  transition: all 0.3s ease; /* Smooth transition for size change */
+  object-fit: contain;
+}
+.product p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.product:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+/* .products button{
+    height: 80px;
+  } */
+
+.state {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(232, 164, 38);
+  border: 2px solid navy;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.cir1 {
+  display: flex;
+  gap: 120px;
+}
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.final-state {
+  border: 3px solid blue;
+}
+
+/* Container for inputs */
+.inputs {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.inputToken{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  padding: 10px;
+  width: 120px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 19px;
+  transition: border-color 0.3s ease;
+
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.displayResult{
+  width: 70%;
+  height: 60px;
+  background: rgb(168, 120, 120);
+  /* margin-top: 50px; */
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 3px solid rgb(132, 85, 93);
+}
+.displayResult p{
+  font-size: 28px;
+}
+
+@keyframes result {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.result {
+  animation: result 1s infinite; /* Change speed as needed */
+}
+
+#reset{
+  height: 40px;
+  width: 80px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  border-radius: 5px;
+}
+#reset:hover{
+  background: #377e3a;
+  transition: background 1s ease  ;
+}
+

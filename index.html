@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vending Machine - Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-cont">
+        <div class="cir1">
+          <div class="state start-state" id="start">Start</div>
+          <div class="state final-state" id="rs5">Mint</div>
+          <div class="state final-state" id="rs10">NutBar</div>
+        </div>
+        <div class="cir1">
+          <div class="state final-state" id="rs15">Chips</div>
+          <div class="state final-state" id="rs20">Cookies</div>
+          <div class="state final-state" id="rs25">Soda</div>
+        </div>
+      </div>
+      <div></div>
+      <div class="right-cont" id="input-section">
+        <!-- <select id="product">
+            <option value="rs5">Pen (Rs. 5)</option>
+            <option value="rs10">Copy (Rs. 10)</option>
+            <option value="rs15">Watch (Rs. 15)</option>
+            <option value="rs20">Coke (Rs. 20)</option>
+            <option value="rs25">Cake (Rs. 25)</option>
+          </select> -->
+          <p class="pProduct">Products</p>
+        <div class="products">
+          
+          <button onclick="checkTransaction('rs5', 'product1')" id="product1" value="rs5">
+            <div class="product">
+              <img src="gum.png" alt="" />
+              <p>Mint - 5</p>
+            </div>
+          </button>
+          <button onclick="checkTransaction('rs10', 'product2')" id="product2" value="rs10">
+            <div class="product">
+              <img src="nut.png" alt="" />
+              <p>NutBar - 10</p>
+            </div>
+          </button>
+          <button onclick="checkTransaction('rs15' , 'product3')" id="product3" value="rs15">
+            <div class="product">
+              <img src="chips.png" alt="" />
+              <p>Chips - 15</p>
+            </div>
+          </button>
+          <button onclick="checkTransaction('rs20' , 'product4')" id="product4" value="rs20">
+            <div class="product">
+              <img src="cookies.png" alt="" />
+              <p>Cookies - 20</p>
+            </div>
+          </button>
+          <button onclick="checkTransaction('rs25' , 'product5')" id="product5" value="rs25">
+            <div class="product">
+              <img src="sodacan.png" alt="" />
+              <p>Soda Can - 25</p>
+            </div>
+          </button>
+        </div>
+        <!-- <button onclick="checkTransaction()">Buy</button> -->
+        <div class="inputs">
+          <div class="inputToken">
+            <label for="token5">Enter Tokens(5):</label>
+            <input type="number" id="token5" min="0" max="5" value="0" />
+          </div>
+          <div class="inputToken">
+            <label for="token10">Enter Tokens(10):</label>
+            <input type="number" id="token10" min="0" max="3" value = "0" />
+          </div>
+          <!-- <p>Amount:<span id="remAmt">0</span> </p> -->
+          <div>
+            <button id= "reset" onclick="reset()">Reset</button>
+          </div>
+          <div class="displayResult">
+            <p id="result"></p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <svg width="100%" height="100%">
+      <!-- Arrows and Curved Lines will be drawn here -->
+    </svg>
+    <script src="script.js"></script>
+  </body>
+</html>
